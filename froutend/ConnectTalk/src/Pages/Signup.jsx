@@ -37,7 +37,7 @@ function Signup() {
               <input
                 type="text"
                 className="grow text-white"
-                placeholder="Username"
+                placeholder="Name"
               />
             </label>
             <label className="input input-bordered flex items-center gap-2">
