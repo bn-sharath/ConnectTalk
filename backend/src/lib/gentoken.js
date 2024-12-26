@@ -12,5 +12,5 @@ export const generate_token = (user_email, res) => {
     secure: process.env.NODE_ENV !== "development",
   });
 
-  // return token;
+  return token;
 };

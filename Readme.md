@@ -1,9 +1,11 @@
 # ConnectTalk | A Web Real Time Chatting Application
 
 ## Introduction
+
 ConnectTalk is a web-based, real-time chatting application designed to provide secure and private communication for users.
 
 ## Key Features
+
 - **Real-Time Messaging:** Users can send and receive messages instantly, ensuring a seamless chat experience.
 - **End-to-End Encryption:** All messages are encrypted from sender to recipient, guaranteeing that only the intended parties can read the messages, ensuring privacy and security.
 - **User Authentication:** Robust user authentication mechanisms are implemented to ensure that only authorized users can access the chat application.
@@ -13,6 +15,7 @@ ConnectTalk is a web-based, real-time chatting application designed to provide s
 - **Technologies Used:** HTML, React.js, Node.js, Express.js, MongoDB, Socket.io, Tailwind CSS, Daisy UI
 
 ## Technologies Used
+
 - **Frontend:** HTML, React.js, Tailwind CSS, Daisy UI
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
@@ -20,35 +23,33 @@ ConnectTalk is a web-based, real-time chatting application designed to provide s
 
 ## Installation
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/bn-sharath/ConnectTalk.git
    
-2.Navigate to the project directory:
+   git clone https://github.com/bn-sharath/ConnectTalk.git
 
-```bash
-cd ConnectTalk
+   
 
-3.Install dependencies:
+2. Navigate to the project directory:
+  cd ConnectTalk
 
-```bash
-npm install
+3. Install dependencies:
+   npm install
 
-4.Start the application:
+4. Start the application:
+   npm start
 
-```bash
-npm start
+## Usage
 
-##Usage
-- **Open your web browser and navigate to http://localhost:<port-number>/
+- Open your web browser and navigate to http://localhost:[port_number]
 
-- **Register a new user or log in with existing credentials.
+- Register a new user or log in with existing credentials.
 
-- **Start chatting with your contacts in real-time.
+- Start chatting with your contacts in real-time.
 
-##Contributing
+## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss improvements or feature
 
-##Acknowledgements
+## Acknowledgements
 
 Feel free to customize the content as needed! Let me know if there's anything else I can help you with.
+

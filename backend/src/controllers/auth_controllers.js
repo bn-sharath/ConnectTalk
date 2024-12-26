@@ -17,10 +17,12 @@ export const signup = async (req, res) => {
       .json({ message: "password must be at least 8 characters" });
   }
   try {
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ Email:email });
+    
     if (user) {
+      console.log("entered the if")
       return res.status(400).json({ message: "email is already exist" });
-    }
+    }else{
     const hashedpassword = await bcrypt.hash(password, 10);
 
     const new_user = new User({
@@ -33,6 +35,7 @@ export const signup = async (req, res) => {
     await new_user.save();
 
     return res.status(201).json({ user: new_user });
+  }
   } catch (error) {
     return res.status(500).json({ message: "error sign up controller", error });
   }
@@ -41,18 +44,20 @@ export const signup = async (req, res) => {
 export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const user = await User.findOne({ email });
-
+    const user = await User.findOne( { Email:email });
+    
     if (!user) {
+      console.log("user if enter")
       return res.status(400).json({ message: "Invalid credentials" });
     }
-
-    const isPasswordCorrect = await bcrypt.compare(password, user.password);
+    
+    const isPasswordCorrect = await bcrypt.compare(password, user.Password);
     if (!isPasswordCorrect) {
+      console.log("password if enter")
       return res.status(400).json({ message: "Invalid credentials" });
     }
 
-    generateToken(user.Email, res);
+    generate_token(user.Email, res);
 
     res.status(200).json({
       user: user,
@@ -71,3 +76,7 @@ export const logout = (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
+export const Update_profile = async (req,res)=>{
+
+}
